@@ -33,6 +33,7 @@ const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '');
 
 }, 10);
 
+document.addEventListener('click', jump);
 
 document.addEventListener('keydown', jump);
 
