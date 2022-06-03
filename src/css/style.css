@@ -3,24 +3,13 @@ body {
     background: var(--background-color);
 }
 
-/* body::before {
-    content: '';
-} */
-
 main {
-    min-height: 100vh;
+    /* min-height: 100vh; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* background-color: darkslateblue; */
 }
-
-/* .header {
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-} */
 
 .header .title {
     color: var(--header-font);
@@ -31,9 +20,12 @@ main {
 }
 
 .game {
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1200px;
     height: 600px;
-    border-bottom: 15px solid green;
+    border-bottom: 15px solid var(--grass);
     margin: 0 auto;
     position: relative;
     overflow: hidden;
@@ -43,17 +35,16 @@ main {
 .pipe {
     position: absolute;
     bottom: 0;
-    width: 80px;
-    animation: pipe 1.2s infinite linear;
+    width: 70px;
+    animation: pipe 1.5s infinite linear;
 }
 
 .mario {
     width: 150px;
     position: absolute;
     bottom: 0;
+    left: 100px;
 }
-
-.jump {animation: mario 500ms ease-out;}
 
 .clouds {
     position: absolute;
@@ -61,6 +52,37 @@ main {
     animation: clouds 15s infinite linear;
     top: 40px;
 }
+
+.clouds2 {
+    position: absolute;
+    width: 550px;
+    animation: clouds2 8s linear;
+    top: 40px;
+}
+
+.game-over {
+    display: none;
+    position: absolute;
+    width: 600px;
+    margin-top: -150px;
+}
+
+.button {
+    display: none;
+    position: relative;
+    width: 250px;
+    height: 50px;
+    margin-top: 120px;
+
+}
+
+.dead {
+    display: none;
+}
+
+.jump {animation: mario 500ms ease-out;}
+
+.dead-anim{animation: dead-anim 500ms ease-out;}
 
 @keyframes pipe {
     from {right: -80px;}
@@ -78,5 +100,15 @@ main {
 @keyframes clouds {
     from {right: -550px;}
     to {right: 100%;}
+}
 
+@keyframes clouds2 {
+    from {right: 300px;}
+    to {right: 100%;}
+}
+
+@keyframes dead-anim {
+    0% {bottom: 0px;}
+    50% {bottom: 180px;}
+    100% {bottom: -150px;}
 }
