@@ -11,12 +11,15 @@ main {
     justify-content: center;
 }
 
-.header .title {
-    color: var(--header-font);
-    text-transform: uppercase;
-    font-size: 60px;
-    line-height: 100px;
-    -webkit-text-stroke: 1.5px var(--header-font-detail);
+.header {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    height: 70px;
 }
 
 .game {

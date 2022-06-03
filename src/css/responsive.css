@@ -4,9 +4,15 @@
 }
 
 @media (max-width: 600px) {
-.header .title {
-        font-size: 45px;
-        line-height: 80px;
+.header {
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    height: 40px;
 }
 
 .game {
