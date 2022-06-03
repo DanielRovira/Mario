@@ -33,6 +33,7 @@ main {
     position: relative;
     overflow: hidden;
     background: linear-gradient(#87CEEB, #E0F6FF);
+    border-radius: 15px;
 }
 
 .pipe {
