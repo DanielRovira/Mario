@@ -1,7 +1,7 @@
 const mario = document.querySelector('.mario');
 const pipe = document.querySelector('.pipe');
 const gameover = document.querySelector('.game-over')
-const button = document.querySelector('.button')
+const restart = document.querySelector('.restart')
 
 const jump = () => {
     mario.classList.add('jump');
@@ -27,8 +27,8 @@ const loop = setInterval(() => {
             mario.classList.add('dead-anim')
             mario.style.bottom = '-80px'
             setInterval(() => {gameover.style.display = 'block';}, 350)
-            setInterval(() => {button.style.display = 'block';}, 850)
-            button.addEventListener('click', () => {document.location.reload()})
+            setInterval(() => {restart.style.display = 'block';}, 850)
+            restart.addEventListener('click', () => {document.location.reload()})
             clearInterval(loop)}}
         else if (pipePosition < 220 && pipePosition > 100 && marioPosition < 70) {
             pipe.style.animation = 'none' 
@@ -41,8 +41,8 @@ const loop = setInterval(() => {
             mario.classList.add('dead-anim')
             mario.style.bottom = '-150px'
             setInterval(() => {gameover.style.display = 'block';}, 350)
-            setInterval(() => {button.style.display = 'block';}, 850)
-            button.addEventListener('click', () => {document.location.reload()})
+            setInterval(() => {restart.style.display = 'block';}, 850)
+            restart.addEventListener('click', () => {document.location.reload()})
             clearInterval(loop)}
 }, 10);
 

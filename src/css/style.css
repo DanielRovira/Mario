@@ -71,7 +71,7 @@ main {
     margin-top: -150px;
 }
 
-.button {
+.restart {
     display: none;
     position: relative;
     width: 250px;
@@ -84,35 +84,6 @@ main {
     display: none;
 }
 
-.jump {animation: mario 500ms ease-out;}
-
-.dead-anim{animation: dead-anim 500ms ease-out;}
-
-@keyframes pipe {
-    from {right: -80px;}
-    to {right: 100%;}
-}
-
-@keyframes mario {
-    0% {bottom: 0px;}
-    40% {bottom: 180px;}
-    50% {bottom: 180px;}
-    60% {bottom: 180px;}
-    100% {bottom: 0px;}
-}
-
-@keyframes clouds {
-    from {right: -550px;}
-    to {right: 100%;}
-}
-
-@keyframes clouds2 {
-    from {right: 300px;}
-    to {right: 100%;}
-}
-
-@keyframes dead-anim {
-    0% {bottom: 0px;}
-    50% {bottom: 180px;}
-    100% {bottom: -150px;}
+.button {
+    display: none;
 }

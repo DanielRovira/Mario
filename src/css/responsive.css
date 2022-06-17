@@ -52,10 +52,21 @@
     margin-top: -50px;
 }
 
-.button {
+.restart {
     width: 100px;
     height: 20px;
     margin-top: 60px;
+}
+
+.button {
+    display: block;
+    max-width: 80vw;
+    max-height: 60vh;
+    margin-top: 5vh;
+}
+
+.button:active {
+    filter:grayscale(30%);
 }
 
 .dead-anim{animation: dead-anim 400ms ease-out;}
