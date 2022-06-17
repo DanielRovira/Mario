@@ -15,7 +15,7 @@ setInterval(() => {document.querySelector('.clouds2').style.animation = ('clouds
 const loop = setInterval(() => {
     const pipePosition = pipe.offsetLeft;
     const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '');
-        if (window.matchMedia('(max-width: 600px)').matches){
+        if (window.matchMedia('(max-width: 600px), (max-height: 700px)').matches){
             if (pipePosition < 90 && pipePosition > 30 && marioPosition < 25) {
             pipe.style.animation = 'none' 
             pipe.style.left = `${pipePosition}px`
@@ -30,7 +30,7 @@ const loop = setInterval(() => {
             setInterval(() => {button.style.display = 'block';}, 850)
             button.addEventListener('click', () => {document.location.reload()})
             clearInterval(loop)}}
-        else {if (pipePosition < 220 && pipePosition > 100 && marioPosition < 70) {
+        else if (pipePosition < 220 && pipePosition > 100 && marioPosition < 70) {
             pipe.style.animation = 'none' 
             pipe.style.left = `${pipePosition}px`
             mario.style.left = `${pipePosition}px`
@@ -43,7 +43,7 @@ const loop = setInterval(() => {
             setInterval(() => {gameover.style.display = 'block';}, 350)
             setInterval(() => {button.style.display = 'block';}, 850)
             button.addEventListener('click', () => {document.location.reload()})
-            clearInterval(loop)}}
+            clearInterval(loop)}
 }, 10);
 
 document.addEventListener('click', jump);
