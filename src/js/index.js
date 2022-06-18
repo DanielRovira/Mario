@@ -49,3 +49,8 @@ const loop = setInterval(() => {
 document.addEventListener('click', jump);
 document.addEventListener('keydown', jump);
 
+window.oncontextmenu = function(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    return false;
+};
